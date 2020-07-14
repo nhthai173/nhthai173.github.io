@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="smartHome/style.css" type="text/css">
+</head>
+<body>
+  <!-- menu Sidenav -->
+  <!-- <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main"> -->
+
+  <!-- Thanh nav trên cùng của trang -->
+  <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+          <!-- Nav items -->
+          <ul class="navbar-nav">
+            <!-- item 1 -->
+              <a class="nav-tabs nav-link" href="/index">
+                <span class="menu">TOÀN BỘ THIẾT BỊ</span>
+              </a>
+            <!-- item 2 -->
+              <a class="nav-link" href="/index">
+                <span class="menu">NHÀ TRƯỚC</span>
+              </a>
+            <!-- item 3 -->
+              <a class="nav-link" href="/index">
+                <span class="menu">PHÒNG THỜ</span>
+              </a>
+            <!-- item 4 -->
+              <a class="nav-link" href="/index">
+                <span class="menu">PHÒNG NGỦ</span>
+              </a>
+          </ul>
+  </nav>
+
+  <!-- Phần màu tím -->
+  <div class="bg-primary">
+    <div class="container-fluid"> <!-- Thụt lề -->
+
+
+        <div class="col-xl-3 col-md-6">
+          <h1 style="color: #5e72e4; font-size: 1.5rem"> . </h1>
+          <h1 class="tenphong">NHÀ TRƯỚC</h1>
+        </div>
+        
+        <div class="row">
+
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats"> <!-- Nền trắng -->
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-auto">
+                    <span class="tenthietbi">Đèn trong nhà</span>
+                    <p>
+                      <span class="trangthai">Trạng thái:</span>
+                      <span id="state-dennhatruoc" style="color: red; font-size: 2.5rem; font-weight: bold"></span>
+                    </p>
+                  </div>  
+                  <div class="btn-center">
+                    <button onclick="bat_dennhatruoc()" class="btn">BẬT</button>
+                    <button onclick="tat_dennhatruoc()" class="btn">TẮT</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats"> <!-- Nền trắng -->
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-auto">
+                    <span class="tenthietbi">Đèn trước sân</span>
+                    <p>
+                      <span class="trangthai">Trạng thái:</span>
+                      <span id="state-dentruocsan" style="color: red; font-size: 2.5rem; font-weight: bold"></span>
+                    </p>
+                  </div>
+                  <div class="btn-center">
+                    <button onclick="bat_dentruocsan()" class="btn">BẬT</button>
+                    <button onclick="tat_dentruocsan()" class="btn">TẮT</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats"> <!-- Nền trắng -->
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-auto">
+                    <span class="tenthietbi">Camera trước sân</span>
+                    <p>
+                      <span class="trangthai">Trạng thái:</span>
+                      <span id="state-cameratruocsan" style="color: red; font-size: 2.5rem; font-weight: bold"></span>
+                    </p>
+                  </div>
+                  <div class="btn-center">
+                    <button onclick="bat_cameratruocsan()" class="btn">BẬT</button>
+                    <button onclick="tat_cameratruocsan()" class="btn">TẮT</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats"> <!-- Nền trắng -->
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-auto">
+                    <span class="tenthietbi">Còi nhà trước</span>
+                    <p>
+                      <span class="trangthai">Trạng thái:</span>
+                      <span id="state-coinhatruoc" style="color: red; font-size: 2.5rem; font-weight: bold"></span>
+                    </p>
+                  </div>
+                  <div class="btn-center">
+                    <button onclick="bat_coinhatruoc()" class="btn">BẬT</button>
+                    <button onclick="tat_coinhatruoc()" class="btn">TẮT</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats"> <!-- Nền trắng -->
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-auto">
+                    <span class="tenthietbi">Báo động nhà trước</span>
+                    <div class="text-center">
+                      <h1>LƯU Ý</h1>
+                      <h1>Chỉ khi đèn báo động được bật thì còi hú mới có hiệu lực</h1>
+                      <h1>Nên nếu còi hú được bật mà đèn báo động tắt thì nó vẫn không kêu</h1>
+                    </div>
+                    <div class="card card-stats">
+                      <div class="card-body" style="border: 10px solid rgba(0, 0, 0, .05); border-radius: 2rem;">
+                        <span class="tieude">Đèn báo động: </span>
+                        <span id="state-alertnhatruoc" style="color: red; font-size: 2.5rem; font-weight: bold"></span>
+                        <div class="btn-center" style="margin-top: 1rem;">
+                          <button onclick="bat_alertnhatruoc()" class="btn">BẬT</button>
+                          <button onclick="tat_alertnhatruoc()" class="btn">TẮT</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body" style="border: 10px solid rgba(0, 0, 0, .05); border-radius: 2rem;">
+                        <span class="tieude">Còi hú: </span>
+                        <span id="state-alertnhatruoc-coihu" style="color: red; font-size: 2.5rem; font-weight: bold"></span>
+                        <div class="btn-center" style="margin-top: 1rem;">
+                          <button onclick="bat_alertnhatruoc_coihu()" class="btn">BẬT</button>
+                          <button onclick="tat_alertnhatruoc_coihu()" class="btn">TẮT</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- Phòng khác -->
+        <div class="col-xl-3 col-md-6">
+          <h1 class="tenphong" style="margin-top: 4rem;">PHÒNG THỜ</h1>
+        </div>
+        <div class="row">
+
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats"> <!-- Nền trắng -->
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-auto">
+                    <span class="tenthietbi">Đèn bên phải</span>
+                    <p>
+                      <span class="trangthai">Trạng thái:</span>
+                      <span id="state-denbenphai" style="color: red; font-size: 2.5rem; font-weight: bold"></span>
+                    </p>
+                  </div>  
+                  <div class="btn-center">
+                    <button onclick="bat_denbenphai()" class="btn">BẬT</button>
+                    <button onclick="tat_denbenphai()" class="btn">TẮT</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats"> <!-- Nền trắng -->
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-auto">
+                    <span class="tenthietbi">Đèn bên trái</span>
+                    <p>
+                      <span class="trangthai">Trạng thái:</span>
+                      <span id="state-denbentrai" style="color: red; font-size: 2.5rem; font-weight: bold"></span>
+                    </p>
+                  </div>
+                  <div class="btn-center">
+                    <button onclick="bat_denbentrai()" class="btn">BẬT</button>
+                    <button onclick="tat_denbentrai()" class="btn">TẮT</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats"> <!-- Nền trắng -->
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-auto">
+                    <span class="tenthietbi">Đèn thờ</span>
+                    <p>
+                      <span class="trangthai">Trạng thái:</span>
+                      <span id="state-dentho" style="color: red; font-size: 2.5rem; font-weight: bold"></span>
+                    </p>
+                  </div>
+                  <div class="btn-center">
+                    <button onclick="bat_dentho()" class="btn">BẬT</button>
+                    <button onclick="tat_dentho()" class="btn">TẮT</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Chân trang -->
+  <footer class="footer pt-0">
+
+  </footer>
+
+
+
+
+  <script src="smartHome/javascript.js"></script>
+
+
+  
+</body>
+</html>
